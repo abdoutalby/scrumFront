@@ -1,0 +1,15 @@
+<app-login
+  *ngIf="gameStatus === 'LOGIN'"
+  (LoginEvent)="login($event)"
+></app-login>
+
+<app-waiting
+  *ngIf="gameStatus === 'WAITING'"
+  (startGameEvent)="startGame()"
+  (leaveRoomEvent)="leaveRoom()"
+  [room]="room"
+></app-waiting>
+
+<app-gamebord *ngIf="gameStatus === 'PLAYING'"></app-gamebord>
+
+<app-score *ngIf="gameStatus === 'OVER'"></app-score>

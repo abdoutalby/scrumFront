@@ -1,0 +1,9 @@
+<mat-list-item class="description">
+  <mat-icon matListIcon>person</mat-icon>
+  <h4 matLine>{{ room.title }} ({{ room.players.length }})</h4>
+  <a matLine> {{ room.owner }} </a>
+  <button mat-button class="text-primary" (click)="deleteRoom()">delete</button>
+  <button mat-button class="text-primary" (click)="joinRoom()">Join</button>
+</mat-list-item>
+
+<div class="mb-2 d-flex"></div>

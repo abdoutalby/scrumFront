@@ -1,0 +1,47 @@
+<mat-spinner
+  class="position-absolute"
+  diameter="30"
+  *ngIf="loading"
+></mat-spinner>
+<div class="container mt-5">
+  <mat-card>
+    <h2 mat-card-title>Rooms</h2>
+
+    <button mat-button (click)="openCreateDialog()">Create Room</button>
+    <a mat-button routerLink="/">Back</a>
+  </mat-card>
+
+  <mat-list *ngIf="userRooms">
+    <h3 matSubheader>Your Rooms</h3>
+    <div *ngFor="let room of userRooms">
+      <app-room-item [room]="room" [user]="user"></app-room-item>
+
+      <mat-divider></mat-divider>
+    </div>
+  </mat-list>
+
+  <mat-list *ngIf="memberRooms">
+    <h3 matSubheader>Joined Rooms</h3>
+    <div *ngFor="let room of memberRooms">
+      <app-room-item [room]="room" [user]="user"></app-room-item>
+
+      <mat-divider></mat-divider>
+    </div>
+  </mat-list>
+
+  <mat-list
+    *ngIf="publicRooms"
+    style="color: black; background-color: rgba(23, 16, 16, 0.282)"
+  >
+    <h3 matSubheader>Public Rooms</h3>
+    <div *ngFor="let room of publicRooms">
+      <app-room-item
+        [room]="room"
+        [user]="user"
+        (deleteEvent)="deleteRoom($event)"
+      ></app-room-item>
+
+      <mat-divider></mat-divider>
+    </div>
+  </mat-list>
+</div>

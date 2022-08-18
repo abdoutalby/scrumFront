@@ -1,1 +1,75 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/scss/bootstrap";
+
+
+// .light-theme{
+//   @include angular-material-theme($light-theme);
+// }
+// .dark-theme{
+//   @include angular-material-theme($dark-theme);
+//   background-color: black;
+// }
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif !important;
+}
+
+.full-screen-width {
+  width: 100vw !important;
+}
+.full-screen-height {
+  height: 100vh !important;
+}
+.full-width {
+  width: 100% !important;
+ }
+.full-height {
+  height: 100% !important;
+}
+h2{
+  border-bottom: 5px solid hsl(231, 66%, 83%) !important;
+}
+label{
+  font-weight: 500;
+  color: white;
+}
+::ng-deep .mat-form-field {
+  .mat-form-field-infix {
+    padding: 15px 10px !important;
+    border: 0 !important;
+  }
+}
+.border-radius-10{
+  border-radius: 20px !important;
+}
+
+small{
+  font-weight: 300;
+}
+.bg-colored{
+  background-image: url("/assets/img/background.png");
+  background-repeat: no-repeat;
+  background-size: cover ;
+  background-position: center center;
+}
+.bg-side{
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: 16% center;
+   border-radius: 5px 0 0 5px;
+  h1{ 
+    font-weight: 400;
+    text-shadow: 1px 1px gray;
+  } 
+  
+}
+ 
+ 
+mat-card{
+  padding: 0 !important;
+}

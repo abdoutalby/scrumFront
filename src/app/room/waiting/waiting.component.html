@@ -1,0 +1,39 @@
+<div class="full-height">
+  <button mat-raised-button (click)="startGame()">start game</button>
+  <button mat-raised-button (click)="leaveRoom()">leave </button>
+
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title> Online players </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-spinner *ngIf="!room"></mat-spinner>
+      <div class="playerslist" *ngIf="room">
+        <mat-list>
+          <mat-list-item
+            *ngFor="let player of room.players"
+            [ngClass]="player.joined ? 'online' : 'offline'"
+          >
+            <mat-icon mat-list-avatar>person</mat-icon>
+            <div>
+              <p mat-line>{{ player.username }}</p>
+            </div>
+          </mat-list-item>
+        </mat-list>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Room description </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-spinner *ngIf="!room"> </mat-spinner>
+      <div class="playerslist" *ngIf="room">
+        <label> title : {{ room.title }}</label
+        ><br />
+        <label> NbStages : {{ room.nbStage }} </label>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
