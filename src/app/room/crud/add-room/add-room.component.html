@@ -1,4 +1,4 @@
-<div>
+<div class="container">
   <h3 *ngIf="type === ActionType.Create">Create Room</h3>
   <form [formGroup]="upsertForm" (ngSubmit)="submit()">
     <mat-list class="block">
@@ -36,7 +36,7 @@
       </mat-form-field>
     </mat-list>
 
-    <button mat-raised-button>
+    <button class="mat-raised-button">
       {{ type === ActionType.Create ? "Create" : "Update" }}
     </button>
   </form>

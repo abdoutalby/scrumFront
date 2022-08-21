@@ -24,7 +24,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
   providers: [ClipboardModule],
   exports: [
     MatInputModule,
-     MatButtonModule,
+    MatButtonModule,
     MatCardModule,
     MatGridListModule,
     MatDialogModule,

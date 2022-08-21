@@ -1,0 +1,27 @@
+h2 {
+  margin-top: 500px;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-left: 300px;
+}
+
+.mat-card {
+//  background: linear-gradient(110deg, #d1501d 60%, #ffed4b 60%);
+background-image: linear-gradient(to right, red, orange, yellow, green);
+  color: #fff;
+  box-shadow: 5px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+.mat-button-c {
+  background-color: rgb(255, 178, 10);
+  margin-left: 100px;
+  opacity: 0.3;
+}
+
+.mat-button {
+  //   background-color: #FFFF
+
+  margin-left: 50px;
+}
