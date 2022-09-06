@@ -51,5 +51,11 @@ export class SocketService {
     return this.user;
   }
 
+  OnScoreUp(){
+    return this.socket.fromEvent("scoreUp");
+  }
+  scoreUp(msg :  any){
+    this.socket.emit("onScoreUp" , msg);
+  }
  
 }

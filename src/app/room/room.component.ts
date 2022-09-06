@@ -48,6 +48,25 @@ this.leaveRoom()  }
     });
   }
 
+  scoreUp(id : any){
+    const msg = {
+      roomId : this.idRoom,
+      player : id
+    }
+    this.service.scoreUp(msg)
+  }
+  onScoreUp(){
+    this.service.OnScoreUp().subscribe({
+      next : (res)=>{
+        console.log(res);
+        console.log("score up")
+      },
+      error : (err)=>{
+        console.log(err);
+      }
+    })
+  }
+
   getJoinedUser() {
     this.service.userJoined().subscribe({
       next: (data: any) => {

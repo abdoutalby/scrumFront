@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
 import { RoomService } from 'src/app/services/room.service';
@@ -12,9 +12,12 @@ import { SocketService } from 'src/app/services/socket.service';
 export class GamebordComponent implements OnInit {
   idRoom: any;
   player : any ={
-    username : 'player',
+    username : 'player0',
     score : 12
   } ;
+
+  @Output()
+  ScoreUpEvent : EventEmitter<any>= new EventEmitter();
   constructor(
     private service: SocketService,
     private snack: MatSnackBar,
@@ -26,5 +29,9 @@ export class GamebordComponent implements OnInit {
   ngOnInit(): void {
     this.idRoom = this.activeRoute.snapshot.params['id'];
     console.log(this.idRoom);
+  }
+
+  scoreUp(p : any){
+    this.ScoreUpEvent.emit(p);
   }
 }

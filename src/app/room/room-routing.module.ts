@@ -10,7 +10,8 @@ import { WaitingComponent } from './waiting/waiting.component';
 const routes: Routes = [{ path: 'game/:id', component: RoomComponent }
 ,{
   path : 'crud' , component : ListComponent
-}
+} , 
+
 ]
    ;
 

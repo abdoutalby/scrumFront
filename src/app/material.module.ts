@@ -17,6 +17,8 @@ import { ClipboardModule } from '@angular/cdk/clipboard';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatRippleModule } from '@angular/material/core';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import {MatTableModule} from "@angular/material/table"
+
 
 @NgModule({
   declarations: [],
@@ -38,7 +40,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatToolbarModule,
     MatRippleModule,
     MatListModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatTableModule,
   ],
 })
 export class MaterialModule {}
