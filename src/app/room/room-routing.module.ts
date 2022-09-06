@@ -1,3 +1,4 @@
+import { ScoreComponent } from './score/score.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ListComponent } from './crud/list/list.component';
@@ -7,11 +8,29 @@ import { LoginComponent } from './login/login.component';
 import { RoomComponent } from './room.component';
 import { WaitingComponent } from './waiting/waiting.component';
  
-const routes: Routes = [{ path: 'game/:id', component: RoomComponent }
-,{
-  path : 'crud' , component : ListComponent
-} , 
-
+const routes: Routes = [
+   {
+      path: 'login',
+      component: LoginComponent
+   },
+   {
+      path: 'wait',
+      component: WaitingComponent
+   },
+   {
+      path: 'score',
+      component: ScoreComponent
+   },
+  {
+     path: 'game/:id', 
+     component: RoomComponent 
+  },
+  {
+     path : 'crud' , 
+     component : ListComponent
+  },
+  { path: 'gamebord',
+   component : GamebordComponent}
 ]
    ;
 

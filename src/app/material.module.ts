@@ -26,7 +26,7 @@ import {MatTableModule} from "@angular/material/table"
   providers: [ClipboardModule],
   exports: [
     MatInputModule,
-     MatButtonModule,
+    MatButtonModule,
     MatCardModule,
     MatGridListModule,
     MatDialogModule,
