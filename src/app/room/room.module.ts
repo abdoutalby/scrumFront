@@ -14,6 +14,7 @@ import { AddRoomComponent } from './crud/add-room/add-room.component';
 import { DetailsComponent } from './crud/details/details.component';
 import { ListComponent } from './crud/list/list.component';
 import { RoomItemComponent } from './crud/room-item/room-item.component';
+import { Stage1Component } from './home/stage1/stage1.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { RoomItemComponent } from './crud/room-item/room-item.component';
     DetailsComponent,
     ListComponent,
     RoomItemComponent,
+    Stage1Component,
   ],
   imports: [
     CommonModule,

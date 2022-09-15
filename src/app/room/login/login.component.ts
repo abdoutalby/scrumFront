@@ -19,6 +19,9 @@ export class LoginComponent implements OnInit  , OnDestroy{
   @Output()
   LoginEvent: EventEmitter<any> = new EventEmitter();
 
+  username="";
+  password= "";
+
   constructor(
     private fb: FormBuilder,
     private snack: MatSnackBar,
@@ -26,6 +29,7 @@ export class LoginComponent implements OnInit  , OnDestroy{
     private activeRoute: ActivatedRoute,
     private router: Router,
     private roomService: RoomService
+
   ) {}
 
   ngOnInit(): void {
@@ -61,8 +65,8 @@ export class LoginComponent implements OnInit  , OnDestroy{
     console.log(this.players);
 
     const user = {
-      username: this.form.value.username,
-      password: this.form.value.password,
+      username: this.username,
+      password: this.password,
     };
     const player = this.players.filter(
       (p) => p.username === user.username && p.password === user.password

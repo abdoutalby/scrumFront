@@ -1,76 +1,40 @@
-/* You can add global styles to this file, and also import other style files */
-@import "~bootstrap/scss/bootstrap";
-
-
-// .light-theme{
-//   @include angular-material-theme($light-theme);
-// }
-// .dark-theme{
-//   @include angular-material-theme($dark-theme);
-//   background-color: black;
-// }
-
-html,
-body {
-  height: 100%;
+html,body{height:100%;}
+body{margin:0;font-family:'Roboto', sans-serif;}
+.header{justify-content:space-between;}
+.user-profile{margin-left:15px;}
+.mat-sidenav-container{height:100%;display:flex;flex:1 1 auto;}
+.mat-nav-list .mat-list-item{font-size:15px;}
+.nav-tool-items{display:inline-block;margin-right:13px;}
+.user-profile{margin-left:15px;cursor:pointer;}
+.hamburger{visibility:hidden !important;}
+.mat-sidenav,.mat-sidenav-content{padding:15px;}
+.mat-list-item.active{background:rgba(0, 0, 0, .04);}
+.mat-sidenav-content{padding:25px 40px 0;}
+.mat-sidenav{background-color:#F2F2F2;width:250px;}
+.header{position:sticky;position:-webkit-sticky;top:0;z-index:1000;}
+mat-sidenav mat-icon{margin-right:12px;}
+.hamburger{margin-top:5px;cursor:pointer;}
+.mat-radio-button,.mat-radio-group{margin-right:25px;}
+.controlers-wrapper>*{width:100%;padding:0;}
+.misc-bottom-padding{margin:8px 0 10px;}
+.misc-bottom-padding mat-label{margin-right:15px;}
+mat-radio-group mat-radio-button{margin-left:5px;}
+.button-wrapper button{margin-right:5px;}
+table.mat-table,table{width:100%;}
+.inner-wrapper{padding:15px 0 130px;width:100%;}
+.inner-wrapper mat-card{display:inline-block;margin:0 6% 0 0;vertical-align:top;width:44%;}
+.full-wrapper{width:100%;}
+.multiple-items{position:relative;}
+.multiple-items .tooltip-info{right:0;top:7px;cursor:pointer;color:#a1a7c7;position:absolute;font-size:20px;}
+body .push-right{margin-right:10px;}
+.no-data{text-align:center;padding-top:30px;color:#6c75a9;}
+.button-wrapper{margin:20px 0 0 0;}
+@media (max-width:1024px){.inner-wrapper mat-card{width:100%;}
+ .mat-sidenav-content{padding:20px 20px 0;}
+ .misc-bottom-padding mat-label{display:block;padding-bottom:10px;}
+ .mat-sidenav{width:230px;}
+ .mat-nav-list .mat-list-item{font-size:14px;}
 }
-body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif !important;
-}
-
-.full-screen-width {
-  width: 100vw !important;
-}
-.full-screen-height {
-  height: 100vh !important;
-}
-.full-width {
-  width: 100% !important;
- }
-.full-height {
-  height: 100% !important;
-}
-h2{
-  border-bottom: 5px solid hsl(231, 66%, 83%) !important;
-}
-label{
-  font-weight: 500;
-  color: rgb(240, 187, 15);
-}
-::ng-deep .mat-form-field {
-  .mat-form-field-infix {
-    padding: 15px 10px !important;
-    border: 0 !important;
-  }
-}
-.border-radius-10{
-  border-radius: 20px !important;
-}
-
-small{
-  font-weight: 300;
-}
-.bg-colored{
-  background-image: url("/assets/img/background.png");
-  background-repeat: no-repeat;
-  background-size: cover ;
-  background-position: center center;
-}
-.bg-side{
-  background-repeat: no-repeat;
-  background-size: auto 100%;
-  background-position: 16% center;
-   border-radius: 5px 0 0 5px;
-  h1{ 
-    font-weight: 400;
-    text-shadow: 1px 1px rgb(196, 39, 39);
-  } 
-  
-}
- 
- 
-mat-card{
-  padding: 0 !important;
-  background-color: rgb(235, 36, 36);
+@media (max-width:767px){.nav-tool-items{margin-right:0;}
+ .hamburger{visibility:visible !important;}
 }

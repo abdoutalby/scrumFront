@@ -15,11 +15,11 @@ export interface Mumber {
 export class ScoreComponent implements OnInit {
 
    mumber: Mumber[] = [
-    { score: 2, name: 'ab', password: 'string1' },
-    { score: 0, name: 'dai', password: 'string2' },
-    { score: 4, name: 'inf', password: 'string1' },
-    { score: 4, name: 'abdou', password: 'string1' },
-    { score: 4, name: 'za', password: 'string1' },
+    { score: 2, name: 'user1', password: 'string1' },
+    { score: 0, name: 'user2', password: 'string2' },
+    { score: 4, name: 'user3', password: 'string1' },
+    { score: 4, name: 'user4', password: 'string1' },
+    { score: 4, name: 'user5', password: 'string1' },
   ];
 
   constructor() { }

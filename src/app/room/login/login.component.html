@@ -11,17 +11,17 @@
             <form>
               <mat-form-field class="full-width">
                 <mat-label>Username</mat-label>
-                <input type="text" formControlName="username" placeholder="Type in your username" matInput />
+                <input type="text" [(ngModel)]="username" name="username" placeholder="Type in your username" matInput />
               </mat-form-field>
               <br>
               <mat-form-field class="full-width">
                 <mat-label>Password</mat-label>
-                <input type="password" formControlName="password" placeholder="Type in your password" matInput />
+                <input type="password" [(ngModel)]="password" name="password" placeholder="Type in your password" matInput />
               </mat-form-field>
 
               <mat-card-actions align="end">
                 <a routerLink="/" mat-button mat-raised-button>Back</a>
-                <button mat-button mat-raised-button color="primary">Login</button>
+                <button mat-button mat-raised-button color="primary" (click)= "login()"></button>
               </mat-card-actions>
             </form>
 

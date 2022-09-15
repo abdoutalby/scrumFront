@@ -1,3 +1,4 @@
+import { Stage1Component } from './home/stage1/stage1.component';
 import { ScoreComponent } from './score/score.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -30,7 +31,12 @@ const routes: Routes = [
      component : ListComponent
   },
   { path: 'gamebord',
-   component : GamebordComponent}
+   component : GamebordComponent
+  },
+  { 
+      path: 'home',
+      component: HomeComponent
+  }
 ]
    ;
 

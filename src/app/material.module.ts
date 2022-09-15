@@ -18,6 +18,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatRippleModule } from '@angular/material/core';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import {MatTableModule} from "@angular/material/table"
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 
 @NgModule({
@@ -42,6 +43,7 @@ import {MatTableModule} from "@angular/material/table"
     MatListModule,
     MatSnackBarModule,
     MatTableModule,
+   DragDropModule,
   ],
 })
 export class MaterialModule {}
