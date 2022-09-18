@@ -1,0 +1,51 @@
+.holeApplication{
+    display: flex;
+    justify-content: space-between;
+    height: 80%;
+}
+
+div {
+    text-align: center;
+}
+
+.DandDList {
+    display: flex;
+    justify-content: space-around;
+    width: 75%;
+}
+.CreatedTasks{
+    width: 25%;
+}
+
+.DandDList > div{
+    width: 100%;
+    margin: 25px;
+}
+
+.singleListLabel{
+    text-align: center;
+    margin: 5px;
+    width: 75px;
+    height: 75px;
+    color: white;
+}
+.singleListBody{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 30px;
+}
+
+.singleListHead{
+    border: solid 0.5px;
+    box-shadow: 10px 10px 5px lightblue;
+
+}
+
+.smallName{
+    color: grey;
+    font-size: small;
+}
+.bigName{
+    font-size:xx-large;
+}

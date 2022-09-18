@@ -22,7 +22,7 @@
 
   <mat-list *ngIf="memberRooms">
     <h3 matSubheader>Joined Rooms</h3>
-    <div *ngFor="let room of memberRooms">
+    <div class="room-list" *ngFor="let room of memberRooms">
       <app-room-item [room]="room" [user]="user"></app-room-item>
 
       <mat-divider></mat-divider>
@@ -31,9 +31,9 @@
 
   <mat-list
     *ngIf="publicRooms"
-    style="color: black; background-color: rgba(23, 16, 16, 0.282)"
+    style="color: rgb(243, 21, 21); background-color: rgb(13, 210, 213)"
   >
-    <h3 matSubheader>Public Rooms</h3>
+   
     <div *ngFor="let room of publicRooms">
       <app-room-item
         [room]="room"

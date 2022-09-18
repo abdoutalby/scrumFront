@@ -15,6 +15,8 @@ import { DetailsComponent } from './crud/details/details.component';
 import { ListComponent } from './crud/list/list.component';
 import { RoomItemComponent } from './crud/room-item/room-item.component';
 import { Stage1Component } from './home/stage1/stage1.component';
+import { Stage2Component } from './home/stage2/stage2.component';
+
 
 
 @NgModule({
@@ -30,6 +32,7 @@ import { Stage1Component } from './home/stage1/stage1.component';
     ListComponent,
     RoomItemComponent,
     Stage1Component,
+    Stage2Component,
   ],
   imports: [
     CommonModule,

@@ -8,7 +8,7 @@ h2 {
 
 .mat-card {
 //  background: linear-gradient(110deg, #d1501d 60%, #ffed4b 60%);
-background-image: linear-gradient(to right, red, orange, yellow, green);
+background-image: linear-gradient(to right, red, orange, yellow);
   color: #fff;
   box-shadow: 5px 2px 1px -1px rgba(0, 0, 0, 0.2),
     0px 1px 3px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
@@ -24,4 +24,10 @@ background-image: linear-gradient(to right, red, orange, yellow, green);
   //   background-color: #FFFF
 
   margin-left: 50px;
+}
+
+
+
+.room-list{
+  background-color: rgba(141, 246, 246, 0.991);
 }

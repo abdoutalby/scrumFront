@@ -1,0 +1,46 @@
+<div style="display: flex;
+flex-direction: column;
+align-items: center;">
+  <header style="width: 100% ;display: flex; justify-content: center; align-items: center; ">
+    <h1
+      style=" box-shadow: 10px 10px 5px black; color: aliceblue; background-color: palevioletred; text-align: center; width: 40%;">
+      Brainwritting</h1>
+  </header>
+  <div class="holeApplication">
+    <div class="DandDList">
+      <div *ngFor="let singleList of DandDLists; let i=index">
+        <div class="singleList">
+          <div [style.border-color]=singleList.color class="singleListHead">
+            <div class="smallName">{{singleList.smallName}}</div>
+            <div class="bigName">{{singleList.bigName}}</div>
+          </div>
+          <div class="singleListBody">
+            <div class="singleListLabel" *ngFor="let label of singleList.labels; let iLabel=index"
+              [style.background-color]=label.color>
+              {{label.value}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="CreatedTasks singleListBody">
+      <div class="singleListLabel" *ngFor="let label of createdListes; let iLabel=index"
+        [style.background-color]=label.color>
+        {{label.value}}
+      </div>
+    </div>
+  </div>
+  <footer style="display: flex; justify-content:space-around;width: 100%;">
+    <p style="color :grey; "> i did not see the text bellow so replace this text
+      <span style="font-size :large ; color: hsl(180deg 73% 43%) ;">&#9733; </span>
+      <span style="font-size :large ; color: hsl(47deg 84% 58%);"> &#9733;</span>
+      <span style="font-size :large ; color:hsl(357deg 79% 72%) ;">&#9733; </span>
+      <span style="font-size :large ; color:hsl(205deg 74% 57%) ;">&#9733; </span>
+      <span style="font-size :large ; color: hsl(205deg 74% 57%);">&#9733; </span>
+    </p>
+    <p style="color :grey; "> <b>Tips</b> i did not see the text bellow so replace this text
+
+    </p>
+  </footer>
+
+</div>

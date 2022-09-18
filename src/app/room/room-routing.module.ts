@@ -1,7 +1,8 @@
-import { Stage1Component } from './home/stage1/stage1.component';
-import { ScoreComponent } from './score/score.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
+
+import { ScoreComponent } from './score/score.component';
 import { ListComponent } from './crud/list/list.component';
 import { GamebordComponent } from './gamebord/gamebord.component';
 import { HomeComponent } from './home/home.component';
