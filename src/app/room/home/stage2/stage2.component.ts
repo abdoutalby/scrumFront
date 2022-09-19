@@ -11,7 +11,7 @@ interface DandDlabel {
 }
 interface DandDList {
   bigName: string;
-  smallName: string;
+  // smallName: string;
   color: string;
   labels: DandDlabel[];
 }
@@ -22,10 +22,20 @@ interface DandDList {
   styleUrls: ['./stage2.component.scss'],
 })
 export class Stage2Component {
-  
+
+  task: DandDList = {
+    bigName: 'Story',
+    color: 'blue',
+    labels:[
+      {value: 'authentificate', color: 'red'},
+      {value: 'add admin', color: 'orange'}, 
+      { value: 'manage product', color: 'yellow'},
+    ],
+  };
+
   todo: DandDList = {
-    bigName: 'todo',
-    smallName: 'this text is small',
+    bigName: 'Release 1',
+    // smallName: 'this text is small',
     color: 'purpule',
     labels: [
       { value: 'handle erreurs', color: 'red' },
@@ -36,8 +46,8 @@ export class Stage2Component {
     ],
   };
   inPrograss: DandDList = {
-    bigName: 'doing',
-    smallName: 'this text is small',
+    bigName: 'Release 2',
+    // smallName: 'this text is small',
     color: 'black',
     labels: [
       { value: 'handle erreurs', color: 'red' },
@@ -48,8 +58,8 @@ export class Stage2Component {
   };
 
   done: DandDList = {
-    bigName: 'done',
-    smallName: 'this text is small',
+    bigName: 'Release 3',
+    // smallName: 'this text is small',
     color: 'blue',
     labels: [
       { value: 'handle erreurs', color: 'red' },
