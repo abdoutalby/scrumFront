@@ -83,6 +83,11 @@ this.leaveRoom()  }
 
   startGame() {
     this.service.startGame(this.idRoom);
+    this.gameStatus ="STAGE1"
+  }
+
+  nextStage(){
+    this.gameStatus = 'STAGE2'
   }
 
   gameOver() {
@@ -98,9 +103,9 @@ this.leaveRoom()  }
   gameStarted() {
     this.service.gameStarted().subscribe({
       next: (res) => {
-        this.gameStatus = 'PLAYING';
+        this.gameStatus = 'STAGE1';
         this.snack.open('Game Started', 'OK');
-       
+        
       },
       error: (err) => {
         console.error(err);

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -8,12 +8,23 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
   
-  constructor( ) { }
+  constructor( private router : Router) { }
 
   ngOnInit(): void {
 
     
 
+  }
+
+
+  stage(stage : number){  
+    if(stage == 1){
+     this.router.navigate(["stage1"])
+    }
+    else {
+      this.router.navigate(["stage2"])
+   
+    }
   }
 
 }

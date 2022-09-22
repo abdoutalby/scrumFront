@@ -1,9 +1,16 @@
-<mat-list-item class="description">
+<mat-list-item class="description" >
   <mat-icon matListIcon>person</mat-icon>
   <h4 matLine>{{ room.title }} ({{ room.players.length }})</h4>
   <a matLine> {{ room.owner }} </a>
   <button mat-button class="text-primary" (click)="deleteRoom()">delete</button>
   <button mat-button class="text-primary" (click)="joinRoom()">Join</button>
+  <button mat-button class="text-primary" (click)="showPlayers()">
+    Show Players
+  </button>
 </mat-list-item>
 
-<div class="mb-2 d-flex"></div>
+<div class="mb-2 d-flex" *ngIf="!hidden">
+  <div *ngFor="let player of room.players">
+    <p>username : {{ player.username }} password : {{ player.password }}</p>
+  </div>
+</div>

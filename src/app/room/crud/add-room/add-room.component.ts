@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, EventEmitter, Inject, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -21,6 +21,7 @@ export interface UpsertDialogData {
   styleUrls: ['./add-room.component.scss'],
 })
 export class AddRoomComponent {
+  
   type: ActionType;
   upsertForm = this.formBuilder.group({
      duration:null,
@@ -58,6 +59,7 @@ export class AddRoomComponent {
         console.log(res)
         this.dialogRef.close()
         this.snack.open('room added ' ,'OK' )
+       
       }
      });
 

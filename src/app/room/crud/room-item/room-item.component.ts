@@ -15,6 +15,7 @@ export class RoomItemComponent implements OnInit {
   @Output() deleteEvent : EventEmitter<string>= new EventEmitter()
   loading = false;
   isOwner = true;
+  hidden = true 
 
    
   constructor( 
@@ -36,6 +37,10 @@ export class RoomItemComponent implements OnInit {
 
   }
 
+  showPlayers()
+  {
+    this.hidden = !this.hidden
+  }
 
 
   leaveRoom() {

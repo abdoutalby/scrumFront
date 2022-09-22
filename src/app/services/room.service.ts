@@ -33,14 +33,8 @@ export class RoomService {
   }
 
   getRoomPlayers(id: string) {
-    const token = localStorage.getItem("token");
-    const tt = `Bearer ${token}`;
-    var headers_object = new HttpHeaders().set('Authorization', tt);
-
-    const httpOptions = {
-      headers: headers_object,
-    };
-    return this.http.get(this.URL + id + '/players', httpOptions);
+    
+    return this.http.get(this.URL +'players/'+ id  );
   }
   getRooms() {
     const token = localStorage.getItem("token");

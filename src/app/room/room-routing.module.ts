@@ -12,7 +12,7 @@ import { WaitingComponent } from './waiting/waiting.component';
  
 const routes: Routes = [
    {
-      path: 'login',
+      path: '',
       component: LoginComponent
    },
    {

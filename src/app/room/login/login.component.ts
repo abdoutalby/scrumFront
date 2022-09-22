@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit  , OnDestroy{
 
   ngOnInit(): void {
     this.idRoom = this.activeRoute.snapshot.params['id'];
-
+    console.log(this.idRoom, "room id ")
     this.getRoomPlayers();
     this.initFormBuilder();
   }
@@ -42,10 +42,11 @@ export class LoginComponent implements OnInit  , OnDestroy{
   getRoomPlayers() {
     this.roomService.getRoomPlayers(this.idRoom).subscribe({
       next: (res: any) => {
+        console.log(res , "response received")
         this.players = res;
       },
       error: (err) => {
-        console.error(err);
+        console.log(err);
       },
     });
   }

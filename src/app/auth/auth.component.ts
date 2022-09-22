@@ -32,16 +32,15 @@ export class AuthComponent implements OnInit {
 
     const user = this.loginForm.value;
 
-    //   this.authService.login(user).subscribe({
-    //   next:(res: any)=>{ 
-    //     localStorage.setItem('token' , res.access_token);
-    //     this.router.navigate(['room/crud'])
-    //   },
-    //   error:(err)=>{
-    //     console.log(err);
-    //   }
-    // });
+      this.authService.login(user).subscribe({
+      next:(res: any)=>{ 
+        localStorage.setItem('token' , res.access_token);
+        this.router.navigate(['room/crud'])
+      },
+      error:(err)=>{
+        console.log(err);
+      }
+    });
 
-    this.router.navigate(['room/crud'])
   }
 }

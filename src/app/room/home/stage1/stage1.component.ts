@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { CdkDragDrop, transferArrayItem } from '@angular/cdk/drag-drop';
 import { User, USER } from '../models/user.model';
 
@@ -12,11 +12,16 @@ export class Stage1Component implements OnInit {
   result: User[] = [];
   rightResponse: string[] = ['Developer', 'Designer', 'Web Dev'];
   points: any = null;
-
+  @Output()
+  nextEvent = new EventEmitter<any>()
   constructor() {}
 
   ngOnInit(): void {
     this.user = USER;
+  }
+
+  next(){
+    this.nextEvent.emit()
   }
 
   drop(event: CdkDragDrop<User[]>) {

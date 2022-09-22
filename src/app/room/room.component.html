@@ -16,3 +16,10 @@
 ></app-gamebord>
 
 <app-score *ngIf="gameStatus === 'OVER'"></app-score>
+
+<app-stage1
+  *ngIf="gameStatus === 'STAGE1'"
+  (nextEvent)="nextStage()"
+></app-stage1>
+
+<app-stage2 *ngIf="gameStatus === 'STAGE2'"></app-stage2>
